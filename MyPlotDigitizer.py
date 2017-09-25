@@ -5,9 +5,16 @@
 
 import numpy as np
 import cv2
-import tkinter as tk   ## notice lowercase 't' in tkinter here 
-from tkinter import filedialog
 
+try:
+	import tkinter as tk   ## notice lowercase 't' in tkinter here 
+except ImportError:
+	import Tkinter as tk
+
+try:
+	from tkinter import filedialog as filedialog
+except ImportError:
+	import tkFileDialog as filedialog 
 
 #variables
 path = None;
@@ -193,23 +200,5 @@ L11.grid(row=6,column=0)
 
 # kick off the GUI
 root.mainloop()
-
-
-
-
-# In[12]:
-
-p=[]
-p.append([1, 2]) 
-
-
-# In[14]:
-
-if p:
-  print("Nothing here")
-
-
-# In[ ]:
-
 
 
